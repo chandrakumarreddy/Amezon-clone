@@ -11,5 +11,4 @@ Others: Zustand, SWR
 
 Admin Login
 
-   - Run http://localhost:3000/signin
    - Enter admin email "admin@example.com" and password "123456" and click Signin
