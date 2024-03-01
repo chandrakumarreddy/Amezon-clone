@@ -1,21 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import ProductItem from '@/components/products/ProductItem'
-import data from '@/lib/data'
-import productService from '@/lib/services/productService'
-import { convertDocToObj } from '@/lib/utils'
-import { Metadata } from 'next'
-import Link from 'next/link'
+import ProductItem from "@/components/products/ProductItem";
+import data from "@/lib/data";
+import productService from "@/lib/services/productService";
+import { convertDocToObj } from "@/lib/utils";
+import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: process.env.NEXT_PUBLIC_APP_NAME || 'Next Amazona V2',
+  title: process.env.NEXT_PUBLIC_APP_NAME || "Amezon",
   description:
     process.env.NEXT_PUBLIC_APP_DESC ||
-    'Nextjs, Server components, Next auth, daisyui, zustand',
-}
+    "Nextjs, Server components, Next auth, daisyui, zustand",
+};
 
 export default async function Home() {
-  const featuredProducts = await productService.getFeatured()
-  const latestProducts = await productService.getLatest()
+  const featuredProducts = await productService.getFeatured();
+  const latestProducts = await productService.getLatest();
   return (
     <>
       <div className="w-full carousel rounded-box mt-4">
@@ -30,7 +30,7 @@ export default async function Home() {
             </Link>
 
             <div
-              className="absolute flex justify-between transform 
+              className="absolute flex justify-between transform
                -translate-y-1/2 left-5 right-5 top-1/2"
             >
               <a
@@ -60,5 +60,5 @@ export default async function Home() {
         ))}
       </div>
     </>
-  )
+  );
 }
